@@ -1,5 +1,6 @@
 import {View, Text, StyleSheet, ImageBackground, Image} from "react-native";
 import KSpacer from "../../components/KSpacer";
+import KButton from "../../components/KButton";
 
 function Landing() {
 
@@ -40,6 +41,8 @@ function Landing() {
                 </View>
 
                 <View style={landingStyles.containerAuth}>
+
+                    <KButton route={'Login'} title={'Next'} color={'#45D33D'}/>
 
                 </View>
 
