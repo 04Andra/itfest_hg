@@ -1,9 +1,13 @@
 import {View, Text, StyleSheet} from "react-native";
+import KButton from "../../components/KButton";
 
 function Login() {
     return(
         <View style={loginStyles.container}>
             <Text style={loginStyles.textLogin}>Login page</Text>
+
+            <KButton route={'TabNav'} title={'Shop'} color={'#45D33D'}/>
+
         </View>
     )
 }

@@ -5,6 +5,13 @@ import Login from "./screens/auth/Login";
 import Register from "./screens/auth/Register";
 import Landing from "./screens/auth/Landing";
 import Shop from "./screens/app/Shop";
+import Profile from "./screens/app/Profile";
+import Icon from 'react-native-ionicons'
+import Entypo from "react-native-vector-icons/Entypo";
+import FontAwesome from "react-native-vector-icons/FontAwesome";
+import Vegetables from "./screens/app/Vegetables";
+import Fruits from "./screens/app/Fruits";
+import Dairy from "./screens/app/Dairy";
 
 const Tab = createBottomTabNavigator()
 const Stack = createNativeStackNavigator()
@@ -14,8 +21,8 @@ const TabNav = () => {
         <Tab.Navigator screenOptions={{
             headerShown: false,
             tabBarStyle: {
-                height: '8%',
-                backgroundColor: "#45D33D"
+                height: '10%',
+                backgroundColor: "#FFF969"
             },
             headerStyle: {
                 backgroundColor: "#45D33D",
@@ -23,16 +30,21 @@ const TabNav = () => {
         }}>
             <Tab.Screen name={"Shop"} component={Shop} options={{
                 tabBarIcon: ({focused}) =>
-                    <Ionicons name={"cart"} size={28} color={focused ? "#45D33D" : 'gray'}/>,
-                tabBarInactiveTintColor: 'gray',
-                tabBarActiveTintColor: '#45D33D',
+
+                    <Entypo name={"shopping-cart"} size={32} color={focused ? "#45D33D" : 'gray'}/>,
+                tabBarInactiveTintColor: '#FFF969',
+                tabBarActiveTintColor: '#FFF969',
+                headerShown: false,
+
             }}
             />
             <Tab.Screen name={"Profile"} component={Profile} options={{
                 tabBarIcon: ({focused}) =>
-                    <Ionicons name={"person"} size={28} color={focused ? "#45D33D" : 'gray'}/>,
-                tabBarInactiveTintColor: 'gray',
-                tabBarActiveTintColor: '#45D33D'
+
+                    <FontAwesome name={"user"} size={32} color={focused ? "#45D33D" : 'gray'}/>,
+                tabBarInactiveTintColor: '#FFF969',
+                tabBarActiveTintColor: '#FFF969'
+
             }}/>
         </Tab.Navigator>
             )}
@@ -44,6 +56,9 @@ const TabNav = () => {
             <Stack.Screen name={"Login"} component={Login} options={{headerShown: false}}/>
     <Stack.Screen name={"Register"} component={Register} options={{headerShown: false}}/>
     <Stack.Screen name={"TabNav"} component={TabNav} options={{headerShown: false}}/>
+                <Stack.Screen name={"Vegetables"} component={Vegetables} options={{headerShown:false}}/>
+                <Stack.Screen name={"Fruits"} component={Fruits} options={{headerShown:false}}/>
+                <Stack.Screen name={"Dairy"} component={Dairy} options={{headerShown:false}}/>
 </Stack.Navigator>
 )
 }
