@@ -5,6 +5,7 @@ function Landing() {
 
     const backgroundImage = require('C:\\Users\\Acer\\Desktop\\ITFest\\itfest_hg\\assets\\photos\\wallpaperGreen.png');
     const basketImage = require('C:\\Users\\Acer\\Desktop\\ITFest\\itfest_hg\\assets\\photos\\basket.png');
+    const producerImage = require('C:\\Users\\Acer\\Desktop\\ITFest\\itfest_hg\\assets\\photos\\producer.png');
 
     return (
         <View style={landingStyles.container1}>
