@@ -6,7 +6,6 @@ import Register from "./screens/auth/Register";
 import Landing from "./screens/auth/Landing";
 import Shop from "./screens/app/Shop";
 import Profile from "./screens/app/Profile";
-import Icon from 'react-native-ionicons'
 import Entypo from "react-native-vector-icons/Entypo";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import Vegetables from "./screens/app/Vegetables";
