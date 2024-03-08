@@ -25,10 +25,11 @@ const TabNav = () => {
                 tabBarIcon: ({focused}) =>
                     <Ionicons name={"cart"} size={28} color={focused ? "#45D33D" : 'gray'}/>,
                 tabBarInactiveTintColor: 'gray',
-                tabBarActiveTintColor: '#FFF969'
+                tabBarActiveTintColor: '#FFF969',
+                headerShown: false,
             }}
             />
-            <Tab.Screen name={"Shop"} component={Shop} options={{
+            <Tab.Screen name={"Profile"} component={Profile} options={{
                 tabBarIcon: ({focused}) =>
                     <Ionicons name={"person"} size={28} color={focused ? "#45D33D" : 'gray'}/>,
                 tabBarInactiveTintColor: 'gray',
