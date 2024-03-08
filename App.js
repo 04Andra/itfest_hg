@@ -30,17 +30,21 @@ const TabNav = () => {
         }}>
             <Tab.Screen name={"Shop"} component={Shop} options={{
                 tabBarIcon: ({focused}) =>
+
                     <Entypo name={"shopping-cart"} size={32} color={focused ? "#45D33D" : 'gray'}/>,
                 tabBarInactiveTintColor: '#FFF969',
                 tabBarActiveTintColor: '#FFF969',
                 headerShown: false,
+
             }}
             />
             <Tab.Screen name={"Profile"} component={Profile} options={{
                 tabBarIcon: ({focused}) =>
+
                     <FontAwesome name={"user"} size={32} color={focused ? "#45D33D" : 'gray'}/>,
                 tabBarInactiveTintColor: '#FFF969',
                 tabBarActiveTintColor: '#FFF969'
+
             }}/>
         </Tab.Navigator>
             )}
