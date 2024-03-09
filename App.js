@@ -11,12 +11,17 @@ import FontAwesome from "react-native-vector-icons/FontAwesome";
 import Vegetables from "./screens/app/Vegetables";
 import Fruits from "./screens/app/Fruits";
 import Dairy from "./screens/app/Dairy";
+import {useState} from "react";
+import {MyContext} from "./assets/context/MyContext";
+
 
 const Tab = createBottomTabNavigator()
 const Stack = createNativeStackNavigator()
 
 const TabNav = () => {
+
     return (
+
         <Tab.Navigator screenOptions={{
             headerShown: false,
             tabBarStyle: {
@@ -50,7 +55,15 @@ const TabNav = () => {
 }
 
 const StackNav = () => {
+
+    const [authProducerContext, setAuthProducerContext] = useState(false);
+    const [authCustomerContext, setAuthCustomerContext] = useState(true);
+
     return (
+        <MyContext.Provider value={{
+            authProducerContext, setAuthProducerContext,
+            authCustomerContext, setAuthCustomerContext
+        }}>
         <Stack.Navigator>
             <Stack.Screen name={"Landing"} component={Landing} options={{headerShown: false}}/>
             <Stack.Screen name={"Login"} component={Login} options={{headerShown: false}}/>
@@ -60,6 +73,7 @@ const StackNav = () => {
             <Stack.Screen name={"Fruits"} component={Fruits} options={{headerShown: false}}/>
             <Stack.Screen name={"Dairy"} component={Dairy} options={{headerShown: false}}/>
         </Stack.Navigator>
+        </MyContext.Provider>
     )
 }
 export default function App() {

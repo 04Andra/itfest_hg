@@ -96,13 +96,13 @@ const registerStyles = StyleSheet.create({
         width: '100%',
     },
     containerHeader: {
-        flex: 1.5,
+        flex: 1.8,
         justifyContent: 'flex-end',
         alignItems: 'center',
     },
     basketImage: {
-        width: '35%',
-        height: '45%'
+        width: '30%',
+        height: '40%'
     },
     textBolt: {
         fontSize: 24,
