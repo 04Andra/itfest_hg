@@ -1,4 +1,4 @@
-import {View, Text, Image, ScrollView} from "react-native";
+import {View, Text, Image, ScrollView, ImageBackground} from "react-native";
 import KTags from "../../components/KTags";
 import KProduct from "../../components/KProduct";
 import KSpacer from "../../components/KSpacer";
@@ -51,16 +51,18 @@ const producers = [{
         name:'Alin C.'
     }
 ]
+const image = {uri:"https://images.unsplash.com/photo-1469122312224-c5846569feb1?q=80&w=1889&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
 function Shop(){
     return(
         <View style={{flex:1}}>
-
+            <ImageBackground source={image} resizeMode="cover" style={{ flex:1}} blurRadius={4}>
+                <KSpacer h={20}/>
             <View style={{alignItems:'flex-end', padding:18, height:"15%"}}>
                 <Image source={{uri:"https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=988&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}}
                        style={{width:"15%", height:"100%", borderRadius:80,shadowRadius:0.2}}/>
             </View>
             <View style={{padding:16}}>
-                <Text style={{fontSize:20, fontWeight:'bold'}}>Shop by category</Text>
+                <Text style={{fontSize:22, fontWeight:'bold'}}>Shop by category</Text>
             </View>
             <View style={{flexDirection:"row", gap: 16, padding:18}}>
                 <KTags tagTitle={"Vegetables"} route={Vegetables}/>
@@ -69,7 +71,7 @@ function Shop(){
             </View>
             <ScrollView>
                 <View style={{padding:16}}>
-                    <Text style={{fontSize:18, fontWeight:'bold'}}>Favourites products</Text>
+                    <Text style={{fontSize:20, fontWeight:'bold'}}>Favourites products</Text>
                 </View>
             <View style={{padding:16}}>
                 <ScrollView horizontal={true}>
@@ -86,7 +88,7 @@ function Shop(){
             </View>
             <KSpacer h={10}/>
             <View style={{padding:16}}>
-                <Text style={{fontSize:18,fontWeight:'600'}}>Top Producers</Text>
+                <Text style={{fontSize:20,fontWeight:'600'}}>Top Producers</Text>
             </View>
            <View style={{flexDirection:'row', gap:30, padding:16}}>
                {
@@ -98,7 +100,9 @@ function Shop(){
                }
            </View>
         </ScrollView>
+            </ImageBackground>
         </View>
+
     )
 }
 export default Shop;
