@@ -30,9 +30,13 @@ const KProduct = ({img, prodName, farmer, produced, price, totalProducts, setTot
                     <Text style={{fontSize:18, fontWeight:'600'}}> Price: {price}</Text>
                     <KSpacer h={8}/>
                     <View style={{flexDirection: 'row', gap: 18, alignItems: 'center', justifyContent: 'center', borderRadius:20, backgroundColor:"#A5DD9B",width:'70%',alignSelf:'center',padding:4}}>
-                        <Button title={'-'} onPress={() => setQuant(Math.max(quant - 1, 0))} color={"black"}/>
+                        <TouchableOpacity onPress={() => setQuant(Math.max(quant - 1, 0))} style={{backgroundColor: 'transparent'}}>
+                            <Text style={{fontSize:20, fontWeight:"bold"}}> - </Text>
+                        </TouchableOpacity>
                         <Text style={{fontSize: 16, fontWeight:'bold'}}>{quant}</Text>
-                        <Button title={'+'} onPress={() => setQuant(quant + 1)} color={"black"}/>
+                        <TouchableOpacity onPress={() => setQuant(quant + 1)} style={{backgroundColor: 'transparent'}}>
+                            <Text style={{fontSize: 20, fontWeight:'bold'}}> + </Text>
+                        </TouchableOpacity>
                     </View>
                     <KButton onPress={() => {
 

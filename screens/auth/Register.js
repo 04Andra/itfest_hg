@@ -47,7 +47,7 @@ function Register({navigation}) {
                         style={registerStyles.userInput}
                         onChangeText={setPhone}
                         value={phone}
-                       /* keyboardType={"number-pad"}*/
+                        keyboardType={"number-pad"}
                         placeholder={'Telephone'}
                     />
 
