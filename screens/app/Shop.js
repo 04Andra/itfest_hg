@@ -9,11 +9,11 @@ import KProducers from "../../components/KProducers";
 
 
 const cards = [{
- img: "https://media.istockphoto.com/id/1251268353/ro/fotografie/rosii-organice-proaspete-pe-fond-rustic-din-lemn.jpg?s=612x612&w=is&k=20&c=TSU_UKa-x-x1O5dvxkJY8vZWjXxJpxdyXK9xHCxA-qo=",
-    prodName:"Tomatoes",
+ img:"https://images.unsplash.com/photo-1520236060906-9c5ed525b025?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    prodName:"Cherries",
     farmer:"Moise P.",
     produced:"Timisoara",
-    price:"3 lei/kg"
+    price:"8 lei/kg"
 },
     {
         img: "https://images.unsplash.com/photo-1518977676601-b53f82aba655?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -28,6 +28,14 @@ const cards = [{
         farmer:"Elena B.",
         produced:"Periam",
         price:"4 lei/kg"
+    },
+    {
+
+        img: "https://images.unsplash.com/photo-1528750997573-59b89d56f4f7?q=80&w=1912&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        prodName:"Milk",
+        farmer:"Elena B.",
+        produced:"Albina",
+        price:"2 lei/l"
     }
 ]
 const producers = [{
@@ -49,7 +57,7 @@ function Shop(){
 
             <View style={{alignItems:'flex-end', padding:18, height:"15%"}}>
                 <Image source={{uri:"https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=988&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}}
-                       style={{width:"15%", height:"100%", borderRadius:80, borderWidth:0.2, shadowRadius:0.2}}/>
+                       style={{width:"15%", height:"100%", borderRadius:80,shadowRadius:0.2}}/>
             </View>
             <View style={{padding:16}}>
                 <Text style={{fontSize:20, fontWeight:'bold'}}>Shop by category</Text>
@@ -80,7 +88,7 @@ function Shop(){
             <View style={{padding:16}}>
                 <Text style={{fontSize:18,fontWeight:'600'}}>Top Producers</Text>
             </View>
-           <View style={{flexDirection:'row', gap:20, padding:16}}>
+           <View style={{flexDirection:'row', gap:30, padding:16}}>
                {
                    producers.map(producer =>
                    <>

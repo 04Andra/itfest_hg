@@ -27,7 +27,10 @@ const TabNav = () => {
             headerShown: false,
             tabBarStyle: {
                 height: '10%',
-                backgroundColor: "#FFF969"
+                backgroundColor: "#FFF969",
+                borderTopLeftRadius:20,
+                borderTopRightRadius:20,
+                shadowOffset:0.2
             },
             headerStyle: {
                 backgroundColor: "#45D33D",
