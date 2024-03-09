@@ -17,8 +17,8 @@ const KProduct = ({img, prodName, farmer, produced, price, totalProducts, setTot
     const {productCardSmall, setProductCardSmall} = useContext(MyContext);
 
     return (
-        <View style={{borderWidth: 1, borderRadius: 10, shadowOpacity: 0.3}}>
-            <Image source={{uri: img}} height={130} width={300} borderRadius={10}/>
+        <View style={{ borderRadius: 10, shadowOpacity: 2,backgroundColor:'white'}}>
+            <Image source={{uri: img}} height={130} width={300} borderRadius={10}blurRadius={1}/>
             <View style={{flexDirection: 'row', gap: 30, width: 300, padding: 10}}>
                 <View style={{flexDirection: 'column', gap: 8, width: '40%'}}>
                     <Text style={{fontSize: 18, fontWeight: '600'}}>{prodName}</Text>
@@ -44,7 +44,7 @@ const KProduct = ({img, prodName, farmer, produced, price, totalProducts, setTot
                         alignItems: 'center',
                         justifyContent: 'center',
                         borderRadius: 20,
-                        backgroundColor: "#45D33D",
+                        backgroundColor: "#A5DD9B",
                         width: '70%',
                         alignSelf: 'center',
                         padding: 4
@@ -89,7 +89,7 @@ const KProduct = ({img, prodName, farmer, produced, price, totalProducts, setTot
                                   disabled={!isButtonActive}
                                   style={{
                                       borderRadius: 10,
-                                      backgroundColor: "#FFF969",
+                                      backgroundColor: "#F1F5A8",
                                       padding: 10,
                                       alignItems: 'center',
                                       flexDirection: 'row',

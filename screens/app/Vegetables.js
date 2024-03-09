@@ -1,4 +1,4 @@
-import {View, TouchableOpacity, Image, Text, ScrollView} from "react-native";
+import {View, TouchableOpacity, Image, Text, ScrollView, ImageBackground} from "react-native";
 import {useNavigation} from "@react-navigation/native";
 import KSpacer from "../../components/KSpacer";
 import KTags from "../../components/KTags";
@@ -29,10 +29,12 @@ const veg = [{
         price: "4 lei/kg"
     }
 ]
+const image = {uri:"https://images.unsplash.com/photo-1469122312224-c5846569feb1?q=80&w=1889&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}
 const Vegetables = () => {
     const navigator = useNavigation()
     return (
         <View style={{flex: 1}}>
+            <ImageBackground source={image} resizeMode="cover" style={{ flex:1}} blurRadius={4}>
             <KSpacer h={10}/>
             <View style={{justifyContent: 'flex-start', padding: 16}}>
                 <TouchableOpacity onPress={() => navigator.goBack()}>
@@ -48,10 +50,10 @@ const Vegetables = () => {
                 <KTags tagTitle={"Dairy"} route={Dairy}/>
             </View>
             <KSpacer h={10}/>
-            <View style={{padding: 18, alignItems:'center'}}>
+            <View style={{marginLeft:20}}>
                 <Text style={{fontWeight: '600', fontSize: 20}}>Products on sale</Text>
             </View>
-            <KSpacer h={20}/>
+            <KSpacer h={30}/>
             <View style={{alignItems:'center',flex:1}}>
                 <ScrollView contentContainerStyle={{flexGrow: 1, alignItems: 'center'}}>
                     {
@@ -65,6 +67,7 @@ const Vegetables = () => {
                             }
                             </ScrollView>
                         </View>
+            </ImageBackground>
             </View>
     )}
                     export default Vegetables;
