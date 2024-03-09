@@ -15,9 +15,9 @@ const KTags = ({tagTitle, route}) => {
     return (
         <TouchableOpacity
             onPress={onChangeColor}
-            style={{backgroundColor: isPressed ? '#45D33D':'#7DF376', padding:10, borderRadius:10, alignItems:"center", elevation:1}}
+            style={{backgroundColor: isPressed ? '#A5DD9B':'#F1F5A8', padding:10, borderRadius:10, alignItems:"center", elevation:1}}
         >
-            <Text style={{color:'white', fontWeight:'500', fontSize:18}}>{tagTitle}</Text>
+            <Text style={{color:'#31363F', fontWeight:'500', fontSize:18}}>{tagTitle}</Text>
         </TouchableOpacity>
     );
 };

@@ -27,9 +27,10 @@ const TabNav = () => {
             headerShown: false,
             tabBarStyle: {
                 height: '10%',
-                backgroundColor: "#FFF969",
-                borderTopLeftRadius:20,
-                borderTopRightRadius:20,
+                backgroundColor: "#F1F5A8",
+                borderRadius:10,
+               /* borderTopLeftRadius:20,
+                borderTopRightRadius:20,*/
                 shadowOffset:0.2
             },
             headerStyle: {
@@ -39,19 +40,18 @@ const TabNav = () => {
             <Tab.Screen name={"Shop"} component={Shop} options={{
                 tabBarIcon: ({focused}) =>
 
-                    <Entypo name={"shopping-cart"} size={32} color={focused ? "#45D33D" : 'gray'}/>,
-                tabBarInactiveTintColor: '#FFF969',
-                tabBarActiveTintColor: '#FFF969',
+                    <Entypo name={"shopping-cart"} size={focused ? 32 : 26} color={focused ? "#A5DD9B" : 'gray'}/>,
+                tabBarInactiveTintColor: '#F1F5A8',
+                tabBarActiveTintColor: '#F1F5A8',
                 headerShown: false,
 
             }}
             />
             <Tab.Screen name={"Profile"} component={Profile} options={{
                 tabBarIcon: ({focused}) =>
-
-                    <FontAwesome name={"user"} size={32} color={focused ? "#45D33D" : 'gray'}/>,
-                tabBarInactiveTintColor: '#FFF969',
-                tabBarActiveTintColor: '#FFF969'
+                    <FontAwesome name={"user"}  size={focused ? 32 : 26} color={focused ? "#A5DD9B" : 'gray'}/>,
+                tabBarInactiveTintColor: '#F1F5A8',
+                tabBarActiveTintColor: '#F1F5A8'
 
             }}/>
         </Tab.Navigator>
