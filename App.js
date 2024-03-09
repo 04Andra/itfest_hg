@@ -47,26 +47,27 @@ const TabNav = () => {
 
             }}/>
         </Tab.Navigator>
-            )}
+    )
+}
 
-            const StackNav = () => {
-            return(
-            <Stack.Navigator>
-                <Stack.Screen name={"Landing"} component={Landing} options={{headerShown:false}}/>
+const StackNav = () => {
+    return (
+        <Stack.Navigator>
+            <Stack.Screen name={"Landing"} component={Landing} options={{headerShown: false}}/>
             <Stack.Screen name={"Login"} component={Login} options={{headerShown: false}}/>
-    <Stack.Screen name={"Register"} component={Register} options={{headerShown: false}}/>
-    <Stack.Screen name={"TabNav"} component={TabNav} options={{headerShown: false}}/>
-                <Stack.Screen name={"Vegetables"} component={Vegetables} options={{headerShown:false}}/>
-                <Stack.Screen name={"Fruits"} component={Fruits} options={{headerShown:false}}/>
-                <Stack.Screen name={"Dairy"} component={Dairy} options={{headerShown:false}}/>
-</Stack.Navigator>
-)
+            <Stack.Screen name={"Register"} component={Register} options={{headerShown: false}}/>
+            <Stack.Screen name={"TabNav"} component={TabNav} options={{headerShown: false}}/>
+            <Stack.Screen name={"Vegetables"} component={Vegetables} options={{headerShown: false}}/>
+            <Stack.Screen name={"Fruits"} component={Fruits} options={{headerShown: false}}/>
+            <Stack.Screen name={"Dairy"} component={Dairy} options={{headerShown: false}}/>
+        </Stack.Navigator>
+    )
 }
 export default function App() {
     return (
-            <NavigationContainer>
-                <StackNav/>
-            </NavigationContainer>
+        <NavigationContainer>
+            <StackNav/>
+        </NavigationContainer>
     );
 }
 
