@@ -11,6 +11,7 @@ import FontAwesome from "react-native-vector-icons/FontAwesome";
 import Vegetables from "./screens/app/Vegetables";
 import Fruits from "./screens/app/Fruits";
 import Dairy from "./screens/app/Dairy";
+import Details from "./screens/app/Details";
 
 const Tab = createBottomTabNavigator()
 const Stack = createNativeStackNavigator()
@@ -59,6 +60,7 @@ const StackNav = () => {
             <Stack.Screen name={"Vegetables"} component={Vegetables} options={{headerShown: false}}/>
             <Stack.Screen name={"Fruits"} component={Fruits} options={{headerShown: false}}/>
             <Stack.Screen name={"Dairy"} component={Dairy} options={{headerShown: false}}/>
+            <Stack.Screen name={"Details"} component={Details} options={{headerShown:false}}/>
         </Stack.Navigator>
     )
 }
