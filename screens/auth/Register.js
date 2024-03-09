@@ -1,6 +1,7 @@
 import {View, Text, StyleSheet, ImageBackground, Image, TextInput, TouchableOpacity} from "react-native";
 import {useState} from "react";
 import KButton from "../../components/KButton";
+import {useNavigation} from "@react-navigation/native";
 
 function Register({navigation}) {
 
@@ -9,7 +10,8 @@ function Register({navigation}) {
 
     const [email, setEmail] = useState("")
     const [phone, setPhone] = useState("")
-
+    const [isRegi, setIsRegi] = useState(true)
+    const navigator = useNavigation()
     return (
         <View style={registerStyles.container1}>
 
@@ -52,16 +54,24 @@ function Register({navigation}) {
 
                 <View style={registerStyles.container3}>
 
-                    <KButton
-                        route={'TabNav'}
-                        color={'#45D33D'}
-                        title={'Sign In'}
-                    />
+                    <TouchableOpacity onPress={() => {
+                        if(email !== '' && phone !==''){
+                            setIsRegi(false)
+                            navigator.navigate('TabNav')
+                        }
+                        else{
+                            alert('You must complete the fields!')
+                        }
+                    }}
+                                      disabled={!isRegi}
+                                      style={{backgroundColor: "#45D33D", borderRadius:10, padding:18, width:'60%',alignItems:'center', shadowOpacity:0.1}}>
+                        <Text style={{fontSize:20, fontWeight:'bold', color:'white'}}>Register</Text>
+                    </TouchableOpacity>
 
                     <View style={registerStyles.signInStyle}>
 
                         <Text style={registerStyles.textLight}>
-                            Do not have an account?
+                            Already have an account?
                         </Text>
 
                         <TouchableOpacity
@@ -69,7 +79,7 @@ function Register({navigation}) {
                                 navigation.navigate('Login')}
                         >
 
-                            <Text style={registerStyles.textUndeline}> Sign Up </Text>
+                            <Text style={registerStyles.textUndeline}> Login </Text>
 
                         </TouchableOpacity>
 
@@ -125,7 +135,7 @@ const registerStyles = StyleSheet.create({
         gap: 25
     },
     userInput: {
-        height: '25%',
+        height: '30%',
         width: '80%',
         borderWidth: 1,
         fontSize: 18,
@@ -134,7 +144,7 @@ const registerStyles = StyleSheet.create({
         backgroundColor: 'white',
     },
     textLight: {
-        fontSize: 20,
+        fontSize: 18,
         textAlign: 'center'
     },
     signInStyle: {
@@ -142,7 +152,7 @@ const registerStyles = StyleSheet.create({
     },
     textUndeline: {
         textDecorationLine: 'underline',
-        fontSize: 20,
+        fontSize: 18,
     }
 });
 

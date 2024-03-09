@@ -5,6 +5,7 @@ import KAuthChooseProducer from "../../components/KAuthChooseProducer";
 import KAuthChooseCustomer from "../../components/KAuthChooseCustomer";
 import {useContext} from "react";
 import {MyContext} from "../../assets/context/MyContext";
+import {useNavigation} from "@react-navigation/native";
 
 function Landing({navigation}) {
 
@@ -57,11 +58,12 @@ function Landing({navigation}) {
                 <View style={landingStyles.containerAuth}>
 
                     <KAuthChooseProducer text={'I’m a local producer'}
-                                         photo={require('../../assets/photos/producer.png')}/>
+                                         photo={require('../../assets/photos/producer.png')}
+                    />
 
                     <KAuthChooseCustomer text={'I’m a customer'}
-                                         photo={require('../../assets/photos/customer.png')}/>
-
+                                         photo={require('../../assets/photos/customer.png')}
+                    />
                 </View>
 
                 <View style={landingStyles.containerButton}>

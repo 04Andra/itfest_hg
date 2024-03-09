@@ -1,6 +1,7 @@
 import {View, Text, StyleSheet, ImageBackground, Image, TextInput, TouchableOpacity} from "react-native";
 import {useState} from "react";
 import KButton from "../../components/KButton";
+import {useNavigation} from "@react-navigation/native";
 
 function Login({navigation}) {
 
@@ -9,6 +10,8 @@ function Login({navigation}) {
 
     const [email, setEmail] = useState("")
     const [phone, setPhone] = useState("")
+    const [isLogged, setIsLogged] = useState(true)
+    const navigator = useNavigation()
 
     return (
         <View style={loginStyles.container1}>
@@ -52,16 +55,24 @@ function Login({navigation}) {
 
                 <View style={loginStyles.container3}>
 
-                    <KButton
-                        route={'TabNav'}
-                        color={'#45D33D'}
-                        title={'Sign Up'}
-                    />
+                    <TouchableOpacity onPress={() => {
+                        if(email !== '' && phone !==''){
+                            setIsLogged(false)
+                            navigator.navigate('TabNav')
+                        }
+                        else{
+                            alert('You must complete the fields!')
+                        }
+                    }}
+                                      disabled={!isLogged}
+                                      style={{backgroundColor: "#45D33D", borderRadius:10, padding:18, width:'60%',alignItems:'center', shadowOpacity:0.1}}>
+                        <Text style={{fontSize:20, fontWeight:'bold', color:'white'}}>Log in</Text>
+                    </TouchableOpacity>
 
                     <View style={loginStyles.signInStyle}>
 
                         <Text style={loginStyles.textLight}>
-                            Already have an account?
+                            Do not  have an account?
                         </Text>
 
                         <TouchableOpacity
@@ -69,7 +80,7 @@ function Login({navigation}) {
                                 navigation.navigate('Register')}
                         >
 
-                            <Text style={loginStyles.textUndeline}> Sign In </Text>
+                            <Text style={loginStyles.textUndeline}> Register </Text>
 
                         </TouchableOpacity>
 
@@ -124,7 +135,7 @@ const loginStyles = StyleSheet.create({
         gap: 25
     },
     userInput: {
-        height: '25%',
+        height: '30%',
         width: '80%',
         borderWidth: 1,
         fontSize: 18,
@@ -133,7 +144,7 @@ const loginStyles = StyleSheet.create({
         backgroundColor: 'white',
     },
     textLight: {
-        fontSize: 20,
+        fontSize: 18,
         textAlign: 'center'
     },
     signInStyle: {
@@ -141,7 +152,7 @@ const loginStyles = StyleSheet.create({
     },
     textUndeline: {
         textDecorationLine: 'underline',
-        fontSize: 20,
+        fontSize: 18,
     }
 });
 
