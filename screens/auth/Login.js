@@ -127,7 +127,7 @@ const loginStyles = StyleSheet.create({
         alignItems: 'center',
         gap: 25,
         borderRadius: 10,
-        margin: 40
+        margin: 30
     },
     container3: {
         flex: 1,

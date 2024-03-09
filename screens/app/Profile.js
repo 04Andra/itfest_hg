@@ -31,7 +31,7 @@ function Profile() {
             </View>
             <KSpacer h={10}/>
             <View style={profileStyles.container2}>
-                <View style={{flex: 0.6}}>
+                <View style={{flex: 0.75}}>
                     <ScrollView horizontal={true} contentContainerStyle={{padding: 10,gap:10,marginLeft:10}}>
 
                         {
@@ -76,7 +76,7 @@ const profileStyles = StyleSheet.create({
     },
     userImage: {
         width: "20%",
-        height: "30%",
+        height: "40%",
         borderRadius: 80,
     },
     usernameText: {
