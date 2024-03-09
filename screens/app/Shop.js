@@ -54,10 +54,10 @@ const producers = [{
 function Shop(){
     return(
         <View style={{flex:1}}>
-
-            <View style={{alignItems:'flex-end', padding:18, height:"15%"}}>
+<KSpacer h={10}/>
+            <View style={{alignItems:'flex-end', padding:20, height:"15%"}}>
                 <Image source={{uri:"https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=988&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}}
-                       style={{width:"15%", height:"100%", borderRadius:80,shadowRadius:0.2}}/>
+                       style={{width:"15%", height:"70%", borderRadius:80,shadowRadius:0.2}}/>
             </View>
             <View style={{padding:16}}>
                 <Text style={{fontSize:20, fontWeight:'bold'}}>Shop by category</Text>
