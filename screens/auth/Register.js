@@ -5,7 +5,7 @@ import {useNavigation} from "@react-navigation/native";
 
 function Register({navigation}) {
 
-    const backgroundImage = require('../../assets/photos/wallpaperGreen.png');
+    const backgroundImage = require('../../assets/photos/wallpaper.png');
     const basketImage = require('../../assets/photos/basket.png');
 
     const [email, setEmail] = useState("")
@@ -65,8 +65,8 @@ function Register({navigation}) {
                         }
                     }}
                                       disabled={!isRegi}
-                                      style={{backgroundColor: "#45D33D", borderRadius:10, padding:18, width:'60%',alignItems:'center', shadowOpacity:0.1}}>
-                        <Text style={{fontSize:20, fontWeight:'bold', color:'white'}}>Register</Text>
+                                      style={{backgroundColor: "#A5DD9B", borderRadius:10, padding:18, width:'60%',alignItems:'center', shadowOpacity:0.1}}>
+                        <Text style={{fontSize:20, fontWeight:'bold', color:'#31363F'}}>Register</Text>
                     </TouchableOpacity>
 
                     <View style={registerStyles.signInStyle}>
@@ -122,7 +122,7 @@ const registerStyles = StyleSheet.create({
     },
     container2: {
         flex: 1,
-        backgroundColor: '#45D33D',
+        backgroundColor: '#A5DD9B',
         justifyContent: 'center',
         alignItems: 'center',
         gap: 25,

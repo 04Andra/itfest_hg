@@ -9,7 +9,7 @@ import {useNavigation} from "@react-navigation/native";
 
 function Landing({navigation}) {
 
-    const backgroundImage = require('../../assets/photos/wallpaperGreen.png');
+    const backgroundImage = require('../../assets/photos/wallpaper.png');
     const basketImage = require('../../assets/photos/basket.png');
 
     const {authProducerContext, setAuthProducerContext} = useContext(MyContext);
@@ -136,12 +136,12 @@ const landingStyles = StyleSheet.create({
         textAlign: 'center'
     },
     textButtonStyle: {
-        color: 'white',
+        color: '#31363F',
         fontSize: 22,
         fontWeight: '600'
     },
     buttonStyle: {
-        backgroundColor: '#45D33D',
+        backgroundColor: '#A5DD9B',
         borderRadius: 10,
         alignItems: 'center',
         padding: 10,

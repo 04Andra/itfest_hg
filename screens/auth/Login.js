@@ -5,7 +5,7 @@ import {useNavigation} from "@react-navigation/native";
 
 function Login({navigation}) {
 
-    const backgroundImage = require('../../assets/photos/wallpaperGreen.png');
+    const backgroundImage = require('../../assets/photos/wallpaper.png');
     const basketImage = require('../../assets/photos/basket.png');
 
     const [email, setEmail] = useState("")
@@ -66,8 +66,8 @@ function Login({navigation}) {
                         }
                     }}
                                       disabled={!isLogged}
-                                      style={{backgroundColor: "#45D33D", borderRadius:10, padding:18, width:'60%',alignItems:'center', shadowOpacity:0.1}}>
-                        <Text style={{fontSize:20, fontWeight:'bold', color:'white'}}>Log in</Text>
+                                      style={{backgroundColor: '#A5DD9B', borderRadius:10, padding:18, width:'60%',alignItems:'center', shadowOpacity:0.1}}>
+                        <Text style={{fontSize:22, fontWeight:'bold', color:'#31363F'}}>Log in</Text>
                     </TouchableOpacity>
 
                     <View style={loginStyles.signInStyle}>
@@ -122,7 +122,7 @@ const loginStyles = StyleSheet.create({
     },
     container2: {
         flex: 1,
-        backgroundColor: '#45D33D',
+        backgroundColor: '#A5DD9B',
         justifyContent: 'center',
         alignItems: 'center',
         gap: 25,
