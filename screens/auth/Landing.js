@@ -1,12 +1,12 @@
 import {View, Text, StyleSheet, ImageBackground, Image} from "react-native";
 import KSpacer from "../../components/KSpacer";
 import KButton from "../../components/KButton";
+import KAuthChoose from "../../components/KAuthChoose";
 
 function Landing() {
 
-    const backgroundImage = require('C:\\Users\\Acer\\Desktop\\ITFest\\itfest_hg\\assets\\photos\\wallpaperGreen.png');
-    const basketImage = require('C:\\Users\\Acer\\Desktop\\ITFest\\itfest_hg\\assets\\photos\\basket.png');
-    const producerImage = require('C:\\Users\\Acer\\Desktop\\ITFest\\itfest_hg\\assets\\photos\\producer.png');
+    const backgroundImage = require('../../assets/photos/wallpaperGreen.png');
+    const basketImage = require('../../assets/photos/basket.png');
 
     return (
         <View style={landingStyles.container1}>
@@ -42,11 +42,17 @@ function Landing() {
 
                 <View style={landingStyles.containerAuth}>
 
-                    <KButton route={'Login'} title={'Next'} color={'#45D33D'}/>
+                    <KAuthChoose text={'I’m a local producer'}
+                                 photo={require('../../assets/photos/producer.png')}/>
+
+                    <KAuthChoose text={'I’m a customer'}
+                                 photo={require('../../assets/photos/customer.png')}/>
 
                 </View>
 
                 <View style={landingStyles.containerButton}>
+
+                    <KButton route={'Login'} title={'Next'} color={'#45D33D'}/>
 
                 </View>
 
@@ -81,6 +87,8 @@ const landingStyles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        flexDirection: 'row',
+        gap: 20,
     },
     containerButton: {
         flex: 1,
