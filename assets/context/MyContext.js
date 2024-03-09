@@ -6,5 +6,9 @@ export const MyContext = createContext({
     setAuthProducerContext: () => {},
     authCustomerContext: {},
     setAuthCustomerContext: () => {},
+    productCardBig: [],
+    setProductCardBig: () => {},
+    productCardSmall: [],
+    setProductCardSmall: () => {},
 
 })
