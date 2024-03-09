@@ -1,14 +1,28 @@
 import {View, Text, StyleSheet, ImageBackground, Image, TouchableOpacity} from "react-native";
 import KSpacer from "../../components/KSpacer";
 import KButton from "../../components/KButton";
-import KAuthChoose from "../../components/KAuthChoose";
+import KAuthChooseProducer from "../../components/KAuthChooseProducer";
+import KAuthChooseCustomer from "../../components/KAuthChooseCustomer";
+import {useContext} from "react";
+import {MyContext} from "../../assets/context/MyContext";
 import {useNavigation} from "@react-navigation/native";
 
-function Landing() {
+function Landing({navigation}) {
 
     const backgroundImage = require('../../assets/photos/wallpaperGreen.png');
     const basketImage = require('../../assets/photos/basket.png');
-    const navigator = useNavigation()
+
+    const {authProducerContext, setAuthProducerContext} = useContext(MyContext);
+    const {authCustomerContext, setAuthCustomerContext} = useContext(MyContext);
+
+    const contextFunction = () => {
+        if (authProducerContext === true) {
+            setAuthCustomerContext(false)
+        } else if (authCustomerContext === true) {
+            setAuthProducerContext(false)
+        }
+    }
+
     return (
         <View style={landingStyles.container1}>
 
@@ -43,18 +57,30 @@ function Landing() {
 
                 <View style={landingStyles.containerAuth}>
 
-                    <KAuthChoose text={'I’m a local producer'}
-                                 photo={require('../../assets/photos/producer.png')}
+                    <KAuthChooseProducer text={'I’m a local producer'}
+                                         photo={require('../../assets/photos/producer.png')}
                     />
 
-                    <KAuthChoose text={'I’m a customer'}
-                                 photo={require('../../assets/photos/customer.png')}
+                    <KAuthChooseCustomer text={'I’m a customer'}
+                                         photo={require('../../assets/photos/customer.png')}
                     />
                 </View>
 
                 <View style={landingStyles.containerButton}>
 
-                    <KButton route={'Login'} title={'Next'} color={'#45D33D'}/>
+                    <TouchableOpacity style={landingStyles.buttonStyle}
+                                      onPress={() => {
+                                          if (authProducerContext === false) {
+                                              alert('Updateing...')
+                                          } else if (authCustomerContext === false) {
+                                              navigation.navigate('Login')
+                                          }
+                                      }}
+                    >
+                        <Text style={landingStyles.textButtonStyle}>
+                            Next
+                        </Text>
+                    </TouchableOpacity>
 
                 </View>
 
@@ -108,6 +134,18 @@ const landingStyles = StyleSheet.create({
     textLight: {
         fontSize: 20,
         textAlign: 'center'
+    },
+    textButtonStyle: {
+        color: 'white',
+        fontSize: 22,
+        fontWeight: '600'
+    },
+    buttonStyle: {
+        backgroundColor: '#45D33D',
+        borderRadius: 10,
+        alignItems: 'center',
+        padding: 10,
+        width: '50%'
     }
 });
 
