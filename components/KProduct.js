@@ -21,7 +21,7 @@ const KProduct = ({img, prodName, farmer, produced, price, totalProducts, setTot
                     <View style={{gap:4}}>
                         <Text style={{fontWeight:"500", color:'#31363F'}}>{produced}📍</Text>
                         <Text style={{fontWeight:'500',color:'#31363F'}}>{farmer}</Text>
-                        <TouchableOpacity onPress={() => navigator.navigate('Details')}>
+                        <TouchableOpacity onPress={() => navigator.navigate('Details',{img, prodName, farmer, produced, price})}>
                             <Text style={{fontWeight:'500', textDecorationLine: 'underline',alignItems:'center'}}>Details</Text>
                         </TouchableOpacity>
                     </View>
@@ -46,7 +46,7 @@ const KProduct = ({img, prodName, farmer, produced, price, totalProducts, setTot
                 <TouchableOpacity onPress={() => {
                     if (quant !== 0 ) {
                         setIsButtonActive(false)
-                        alert('Order sent.')
+                        alert(`Order sent to ${farmer}`)
                     } else {
                         alert('No quantity!')
                     }

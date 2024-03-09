@@ -48,6 +48,7 @@ function Login({navigation}) {
                         style={loginStyles.userInput}
                         onChangeText={setPhone}
                         value={phone}
+                        keyboardType={"number-pad"}
                         placeholder={'Telephone'}
                     />
 
@@ -136,7 +137,7 @@ const loginStyles = StyleSheet.create({
     },
     userInput: {
         height: '30%',
-        width: '80%',
+        width: '90%',
         borderWidth: 1,
         fontSize: 18,
         borderRadius: 10,

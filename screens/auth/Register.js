@@ -47,6 +47,7 @@ function Register({navigation}) {
                         style={registerStyles.userInput}
                         onChangeText={setPhone}
                         value={phone}
+                       /* keyboardType={"number-pad"}*/
                         placeholder={'Telephone'}
                     />
 
@@ -126,7 +127,7 @@ const registerStyles = StyleSheet.create({
         alignItems: 'center',
         gap: 25,
         borderRadius: 10,
-        margin: 40
+        margin: 30,
     },
     container3: {
         flex: 1,
@@ -136,7 +137,7 @@ const registerStyles = StyleSheet.create({
     },
     userInput: {
         height: '30%',
-        width: '80%',
+        width: '90%',
         borderWidth: 1,
         fontSize: 18,
         borderRadius: 10,
