@@ -1,8 +1,8 @@
 import {Image, StyleSheet, Text, TouchableOpacity, View} from "react-native";
 import {useState} from "react";
 
-function KAuthChoose({photo, text}){
 
+function KAuthChoose({photo, text}){
         return (
 
             <TouchableOpacity
@@ -60,3 +60,4 @@ const KAuthStyles = StyleSheet.create({
 });
 
 export default KAuthChoose;
+
