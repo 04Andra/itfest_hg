@@ -62,11 +62,15 @@ const StackNav = () => {
 
     const [authProducerContext, setAuthProducerContext] = useState(false);
     const [authCustomerContext, setAuthCustomerContext] = useState(true);
+    const [productCardBig, setProductCardBig] = useState([]);
+    const [productCardSmall, setProductCardSmall] = useState([]);
 
     return (
         <MyContext.Provider value={{
             authProducerContext, setAuthProducerContext,
-            authCustomerContext, setAuthCustomerContext
+            authCustomerContext, setAuthCustomerContext,
+            productCardBig, setProductCardBig,
+            productCardSmall, setProductCardSmall
         }}>
         <Stack.Navigator>
             <Stack.Screen name={"Landing"} component={Landing} options={{headerShown: false}}/>
