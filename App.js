@@ -15,6 +15,7 @@ import {useState} from "react";
 import {MyContext} from "./assets/context/MyContext";
 
 import Details from "./screens/app/Details";
+import LocationPicker from "./screens/app/Map";
 
 const Tab = createBottomTabNavigator()
 const Stack = createNativeStackNavigator()
@@ -81,6 +82,7 @@ const StackNav = () => {
             <Stack.Screen name={"Fruits"} component={Fruits} options={{headerShown: false}}/>
             <Stack.Screen name={"Dairy"} component={Dairy} options={{headerShown: false}}/>
             <Stack.Screen name={"Details"} component={Details} options={{headerShown:false}}/>
+            <Stack.Screen name={"Map"} component={LocationPicker} options={{headerShown:false}}/>
         </Stack.Navigator>
         </MyContext.Provider>
     )
