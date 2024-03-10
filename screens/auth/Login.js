@@ -48,7 +48,7 @@ function Login({navigation}) {
                         style={loginStyles.userInput}
                         onChangeText={setPhone}
                         value={phone}
-                        keyboardType={"number-pad"}
+                     /*   keyboardType={"number-pad"}*/
                         placeholder={'Telephone'}
                     />
 

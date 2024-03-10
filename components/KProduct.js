@@ -23,14 +23,15 @@ const KProduct = ({img, prodName, farmer, produced, price, totalProducts, setTot
                 <View style={{flexDirection: 'column', gap: 8, width: '40%'}}>
                     <Text style={{fontSize: 18, fontWeight: '600'}}>{prodName}</Text>
                     <View style={{gap: 4}}>
-                        <Text style={{fontWeight: "500", color: '#31363F'}}>{produced}📍</Text>
-                        <Text style={{fontWeight: '500', color: '#31363F'}}>{farmer}</Text>
+                        <Text style={{fontWeight: "500", color: '#31363F',fontSize:15}}>{produced}📍</Text>
+                        <Text style={{fontWeight: '500', color: '#31363F',fontSize:15}}>{farmer}</Text>
                         <TouchableOpacity
                             onPress={() => navigator.navigate('Details', {img, prodName, farmer, produced, price})}>
                             <Text style={{
                                 fontWeight: '500',
                                 textDecorationLine: 'underline',
-                                alignItems: 'center'
+                                alignItems: 'center',
+                                fontSize:15
                             }}>Details</Text>
                         </TouchableOpacity>
                     </View>
@@ -58,6 +59,10 @@ const KProduct = ({img, prodName, farmer, produced, price, totalProducts, setTot
                             <Text style={{fontSize: 20, fontWeight: 'bold'}}> + </Text>
                         </TouchableOpacity>
                     </View>
+                    <KSpacer h={10}/>
+                    <TouchableOpacity onPress={() => navigator.navigate("Map")} style={{borderRadius:10, backgroundColor:"#A5DD9B",padding:8}}>
+                        <Text style={{fontWeight:'500', fontSize:16}}>Your location</Text>
+                    </TouchableOpacity>
                     <KButton onPress={() => {
 
                         addtoCart()
