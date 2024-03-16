@@ -24,7 +24,7 @@
    <img src ="./photosRM/MapScreen.jpg" width = "300" height ="400"/> 
     <br>
   <li><b>Ordering Screen</b></li>
-   <img src ="./photosRM/OrderingScreen.jpg" width = "300" height ="400"/> 
+   <img src ="./photosRM/Ordering.jpg" width = "300" height ="400"/> 
     <br>
   <li><b>Category Screen</b></li>
    <img src ="./photosRM/TagSelected.jpg" width = "300" height ="400"/> 
