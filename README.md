@@ -8,27 +8,27 @@
    <img src ="./photosRM/Landing.jpg" width = "300" height ="400"/> 
     <br>
   <li><b>Login Screen</b></li>
-   <img src ="./itfest_hg/photosRM/LoginScreen.png" width = "300" height ="400"/>
+   <img src ="./photosRM/LoginScreen.jpg" width = "300" height ="400"/>
   <br>
 </ul>
   <hr>
   <h4>📲<font size = 14>App screens</font></h5>
   <ul>
   <li><b>Shop Screen</b></li>
-   <img src ="./itfest_hg/photosRM/ShopScreen.png" width = "300" height ="400"/> 
+   <img src ="./photosRM/ShopScreen.jpg" width = "300" height ="400"/> 
    <br>
   <li><b>Details for products screen</b></li>
-   <img src ="./itfest_hg/photosRM/DetailsScreen.png" width = "300" height ="400"/> 
+   <img src ="./photosRM/DetailsScreen.jpg" width = "300" height ="400"/> 
     <br>
   <li><b>Map Screen</b></li>
-   <img src ="./itfest_hg/photosRM/MapScreen.png" width = "300" height ="400"/> 
+   <img src ="./photosRM/MapScreen.jpg" width = "300" height ="400"/> 
     <br>
   <li><b>Ordering Screen</b></li>
-   <img src ="./itfest_hg/photosRM/OrderingScreen.png" width = "300" height ="400"/> 
+   <img src ="./photosRM/OrderingScreen.jpg" width = "300" height ="400"/> 
     <br>
   <li><b>Category Screen</b></li>
-   <img src ="./itfest_hg/photosRM/TagSelected.png" width = "300" height ="400"/> 
+   <img src ="./photosRM/TagSelected.jpg" width = "300" height ="400"/> 
     <br>
   <li><b>Customers profile Screen</b></li>
-   <img src ="./itfest_hg/photosRM/ProfileScreen.png" width = "300" height ="400"/> 
+   <img src ="./photosRM/ProfileScreen.jpg" width = "300" height ="400"/> 
 </ul>
