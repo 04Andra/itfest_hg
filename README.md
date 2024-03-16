@@ -5,7 +5,7 @@
  <h3> 🚀Landing and Authentication</h4>
 <ul>
   <li><b>Landing Screen</b></li>
-   <img src ="./photosRM/Landing.png" width = "300" height ="400"/> 
+   <img src ="./photosRM/Landing.jpg" width = "300" height ="400"/> 
     <br>
   <li><b>Login Screen</b></li>
    <img src ="./itfest_hg/photosRM/LoginScreen.png" width = "300" height ="400"/>
